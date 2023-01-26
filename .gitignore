@@ -1,0 +1,61 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+frontend/dist/
+frontend/tmp/
+
+# dependencies
+frontend/bower_components/
+node_modules/
+
+# misc
+frontend/.env*
+frontend/.pnp*
+frontend/.sass-cache
+frontend/.eslintcache
+frontend/connect.lock
+frontend/coverage/
+frontend/libpeerconnection.log
+frontend/npm-debug.log*
+frontend/testem.log
+frontend/yarn-error.log
+
+# ember-try
+frontend/.node_modules.ember-try/
+frontend/bower.json.ember-try
+frontend/npm-shrinkwrap.json.ember-try
+frontend/package.json.ember-try
+frontend/package-lock.json.ember-try
+frontend/yarn.lock.ember-try
+
+# broccoli-debug
+frontend/DEBUG/
+
+.DS_Store/
+
+backend/.bundle
+
+# Ignore the default SQLite database.
+backend/db/*.sqlite3
+backend/db/*.sqlite3-*
+
+# Ignore all logfiles and tempfiles.
+backend/log/*
+backend/tmp/*
+backend!/log/.keep
+backend!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+backend/tmp/pids/*
+backend!/tmp/pids/
+backend!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+backend/storage/*
+backend!/storage/.keep
+backend/tmp/storage/*
+backend!/tmp/storage/
+backend!/tmp/storage/.keep
+
+# Ignore master key for decrypting credentials and more.
+backend/config/master.key

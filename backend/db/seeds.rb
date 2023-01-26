@@ -1,0 +1,1 @@
+History.create!([{ player: 'X',won:0},{ player: 'O',won:0}])

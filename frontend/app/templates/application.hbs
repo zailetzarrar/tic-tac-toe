@@ -1,0 +1,41 @@
+{{page-title "TicTacToe"}}
+
+<main class="background">
+  <section class="title">
+    <h1>Tic Tac Toe</h1>
+  </section>
+  <section class="display">
+    Player
+    <span class="display-player playerX">{{this.player}}</span>
+    's turn
+  </section>
+  <section class="gameBoard">
+    {{#each this.board as |value index|}}
+      <div
+        {{on "click" this.cellClick}}
+        data-value={{index}}
+        class="cell"
+      >{{value}}</div>
+    {{/each}}
+  </section>
+  <section class="controls">
+    <button id="reset" onClick={{this.resetBoard}}>
+      Reset
+    </button>
+  </section>
+  <section class="display announcer">
+    {{#if this.isWon}}
+      {{this.player}}
+      won the game
+    {{/if}}
+  </section>
+  <section class="display history">
+    {{!-- {{#if this.history}} --}}
+    {{#each this.history as |value index|}}
+      <div>{{value.player}} won : {{value.won}}</div>
+    {{/each}}
+    {{!-- {{/if}} --}}
+  </section>
+</main>
+
+{{outlet}}
